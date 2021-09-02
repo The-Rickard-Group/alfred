@@ -1,0 +1,188 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+:root {
+--primary: #523DEB;
+--primaryboxshadow: #4634c880;
+--primaryboxshadow2: #5e46ff80;
+--dimprimary: #6859da;
+--dimprimaryboxshadow: #6e62c480;
+--dimprimaryboxshadow2: #9484ff80;
+--secondary: #ababab;
+--secondaryboxshadow: #c7c7c780;
+--secondaryboxshadow2: #c5c5c580;
+--dimsecondary: #b9b9b9;
+--dimsecondarytext: #090719;
+--dimsecondaryboxshadow: #b8b8b8;
+--dimsecondaryboxshadow2: #f8f8f8;
+--primarytext: #ffffff;
+--secondarytext: #ffffff;
+--text: #090719;
+--alt: #090719;
+--altboxshadow: #08061580;
+--altboxshadow2: #0a081d80;
+--alttext: #ffffff;
+--dimalt: #252334;
+--dimaltboxshadow: #1f1e2c80;
+--dimaltboxshadow2: #2b283c80;
+--modulebglight: #e4e4e4;
+--modulebgdark: #464646;
+--error: #e94e4e;
+--errortext: #ffffff;
+--errorboxshadow: #f5575780;
+--dimerror: #e66a6a;
+--good: #7add53;
+--goodtext: #ffffff;
+--goodboxshadow: #87df6480;
+--dimgood: #8ce26b;
+--bglight: #e0e0e0;
+--bglightboxshadow: #bebebe;
+--bglightboxshadow2: #ffffff;
+--bgdark: #2b2b2b;
+--bgdarkboxshadow: #252525;
+--bgdarkboxshadow2: #313131;
+--margin0: 0px;
+--padding0: 0px;
+--margin10: 10px;
+--padding10: 10px;
+--margin20: 20px;
+--padding20: 20px;
+--btnfontsize: 20px;
+}
+body {
+    font-family: 'Poppins', sans-serif;
+    margin: var(--padding0);
+}
+.alfrd-light {
+    background: var(--bglight);
+}
+.alfrd-dark {
+    background: var(--bgdark);
+}
+.alfrd-module-light {
+    margin: var(--margin10);
+    padding: var(--padding10);
+    border-radius: 25px;
+    background: var(--modulebglight);
+    box-shadow:  10px 10px 20px var(--bglightboxshadow),
+             -10px -10px 20px var(--bglightboxshadow2);
+    border: #fff solid 1px;
+}
+.alfrd-module-dark {
+    margin: var(--margin10);
+    padding: var(--padding10);
+    border-radius: 25px;
+    background: var(--modulebgdark);
+    box-shadow:  10px 10px 20px var(--bgdarkboxshadow),
+             -10px -10px 20px var(--bgdarkboxshadow2);
+    border: #fff solid 1px;
+}
+.alfrd-row {
+    display: flex;
+    justify-content: center;
+}
+.alfrd-1>* {
+    width: 100%;
+  }
+.alfrd-2>* {
+    width: 50%;
+  }
+.alfrd-3>* {
+    width: 33.3%;
+}
+.alfrd-4>* {
+    width: 25%;
+  }
+.alfrd-5>* {
+    width: 20%;
+}
+.alfrd-btn {
+    margin: var(--margin10);
+    padding: var(--padding10);
+    font-size: var(--btnfontsize);
+    border-radius: 50px;
+    -webkit-transition: all 400ms ease;
+    transition: all 400ms ease;
+    border: none;
+}
+.btn-p {
+    color: var(--primarytext);
+    background: var(--primary);
+}
+.btn-p:hover {
+    color: var(--primarytext);
+    background: var(--dimprimary);
+}
+.btn-p:active {
+    color: var(--primarytext);
+    background: var(--dimprimary);
+    box-shadow:  0px 0px 0px 4px var(--primaryboxshadow);
+}
+
+.btn-s {
+    color: var(--secondarytext);
+    background: var(--secondary);
+}
+.btn-s:hover {
+    color: var(--secondarytext);
+    background: var(--dimsecondary);
+}
+.btn-s:active {
+    color: var(--secondarytext);
+    background: var(--dimsecondary);
+    box-shadow:  0px 0px 0px 4px var(--secondaryboxshadow);
+}
+.btn-a {
+    color: var(--alttext);
+    background: var(--alt);
+}
+.btn-a:hover {
+    color: var(--alttext);
+    background: var(--dimalt);
+}
+.btn-a:active {
+    color: var(--alttext);
+    background: var(--dimalt);
+    box-shadow:  0px 0px 0px 4px var(--altboxshadow);
+}
+
+
+.btn-e {
+    color: var(--errortext);
+    background: var(--error);
+}
+.btn-e:hover {
+    color: var(--errortext);
+    background: var(--dimerror);
+}
+.btn-e:active {
+    color: var(--errortext);
+    background: var(--dimerror);
+    box-shadow:  0px 0px 0px 4px var(--errorboxshadow);
+}
+.btn-g {
+    color: var(--goodtext);
+    background: var(--good);
+}
+.btn-g:hover {
+    color: var(--goodtext);
+    background: var(--dimgood);
+}
+.btn-g:active {
+    color: var(--goodtext);
+    background: var(--dimgood);
+    box-shadow:  0px 0px 0px 4px var(--goodboxshadow);
+}
+.alfrd-nav-light {
+    width: 100%;
+    padding: var(--padding10);
+    border-radius: 0px;
+    background: var(--modulebglight);
+    box-shadow:  10px 10px 20px var(--bglightboxshadow),
+             -10px -10px 20px var(--bglightboxshadow2);
+}
+.fixed {
+    position: fixed;
+}
+.top {
+    top: 0px;
+}
+
