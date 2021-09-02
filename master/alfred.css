@@ -1,80 +1,186 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 :root {
---primary: #523DEB;
---primaryboxshadow: #4634c880;
---primaryboxshadow2: #5e46ff80;
---dimprimary: #6859da;
---dimprimaryboxshadow: #6e62c480;
---dimprimaryboxshadow2: #9484ff80;
---secondary: #ababab;
---secondaryboxshadow: #c7c7c780;
---secondaryboxshadow2: #c5c5c580;
---dimsecondary: #b9b9b9;
---dimsecondarytext: #090719;
---dimsecondaryboxshadow: #b8b8b8;
---dimsecondaryboxshadow2: #f8f8f8;
---primarytext: #ffffff;
---secondarytext: #ffffff;
---text: #090719;
---alt: #090719;
---altboxshadow: #08061580;
---altboxshadow2: #0a081d80;
---alttext: #ffffff;
---dimalt: #252334;
---dimaltboxshadow: #1f1e2c80;
---dimaltboxshadow2: #2b283c80;
---modulebglight: #e4e4e4;
---modulebgdark: #464646;
---error: #e94e4e;
---errortext: #ffffff;
---errorboxshadow: #f5575780;
---dimerror: #e66a6a;
---good: #7add53;
---goodtext: #ffffff;
---goodboxshadow: #87df6480;
---dimgood: #8ce26b;
---bglight: #e0e0e0;
---bglightboxshadow: #bebebe;
---bglightboxshadow2: #ffffff;
---bgdark: #2b2b2b;
---bgdarkboxshadow: #252525;
---bgdarkboxshadow2: #313131;
---margin0: 0px;
---padding0: 0px;
---margin10: 10px;
---padding10: 10px;
---margin20: 20px;
---padding20: 20px;
---btnfontsize: 20px;
+--border-radius: 15px;
+
+--padding-0: 0px;
+--padding-5: 5px;
+--padding-10: 10px;
+--padding-15: 15px;
+--padding-20: 20px;
+--padding-40: 40px;
+
+--margin-0: 0px;
+--margin-5: 5px;
+--margin-10: 10px;
+--margin-15: 15px;
+--margin-20: 20px;
+--margin-40: 40px;
+
+--primary: #2776f5;
+--primary-dim: #478af5;
+--primary-active: #2776f580;
+--primary-text: #ffffff;
+
+--secondary: #767e8c;
+--secondary-dim: #868f9e;
+--secondary-active: #767e8c80;
+--secondary-text: #ffffff;
+
+--error: #ff243d;
+--error-dim: #ff3d54;
+--error-active: #ff243d80;
+--error-text: #ffffff;
+
+--warning: #ffd117;
+--warning-dim: #ffd942;
+--warning-active: #ffd11780;
+--warning-text: #ffffff;
+
+--success: #51f03c;
+--success-dim: #6ee65e;
+--success-active: #51f03c80;
+--success-text: #ffffff;
+
+--page-bg-light: #f2f2f2;
+--page-text-light: #262626;
+--page-bg-dark: #262626;
+--page-text-dark: #f2f2f2;
+
+--module-light-bg: #ffffff;
+--module-light-border: #f1f1f1;
+--module-light-text: #262626;
+--module-dark-bg: #3d3d3d;
+--module-dark-border: #2b2b2b;
+--module-dark-text: #f2f2f2;
 }
 body {
-    font-family: 'Poppins', sans-serif;
-    margin: var(--padding0);
+    margin: 0px;
+}
+input:focus, textarea:focus {
+    outline: 0;
+}
+.alfrd-input {
+border: none;
+padding: var(--padding-10);
+margin: var(--margin-10);
+border-radius: var(--border-radius);
+-webkit-transition: all 200ms ease;
+transition: all 200ms ease;
+}
+.alfrd-textarea {
+border: none;
+padding: var(--padding-10);
+margin: var(--margin-10);
+border-radius: var(--border-radius);
+-webkit-transition: all 200ms ease;
+transition: all 200ms ease;
+}
+.input-light {
+background: var(--page-bg-light);
+color: var(--module-dark-bg);
+}
+.input-light:focus {
+    color: var(--module-light-text);
+    border: 1px solid var(--primary);
+    box-shadow: 0px 0px 0px 4px var(--primary-active);
+}
+.input-dark {
+color: var(--module-light-bg);
+background: var(--page-bg-dark);
+}
+.input-dark:focus {
+    color: var(--module-dark-text);
+    border: 1px solid var(--primary);
+    box-shadow: 0px 0px 0px 4px var(--primary-active);
 }
 .alfrd-light {
-    background: var(--bglight);
+background: var(--page-bg-light);
+color: var(--page-text-light);
 }
 .alfrd-dark {
-    background: var(--bgdark);
+background: var(--page-bg-dark);
+color: var(--page-text-dark);
 }
-.alfrd-module-light {
-    margin: var(--margin10);
-    padding: var(--padding10);
-    border-radius: 25px;
-    background: var(--modulebglight);
-    box-shadow:  10px 10px 20px var(--bglightboxshadow),
-             -10px -10px 20px var(--bglightboxshadow2);
-    border: #fff solid 1px;
+.alfrd-module {
+border-radius: var(--border-radius);
+padding: var(--padding-10);
+margin: var(--margin-10);
+box-shadow: 0px 4px 7px 0px #00000021;
 }
-.alfrd-module-dark {
-    margin: var(--margin10);
-    padding: var(--padding10);
-    border-radius: 25px;
-    background: var(--modulebgdark);
-    box-shadow:  10px 10px 20px var(--bgdarkboxshadow),
-             -10px -10px 20px var(--bgdarkboxshadow2);
-    border: #fff solid 1px;
+.module-light {
+background: var(--module-light-bg);
+border: 1px solid var(--module-light-border);
+color: var(--module-light-text)
 }
+.module-dark {
+background: var(--module-dark-bg);
+border: 1px solid var(--module-dark-border);
+color: var(--module-dark-text)
+}
+.alfrd-btn {
+border: none;
+border-radius: var(--border-radius);
+padding: var(--padding-10);
+-webkit-transition: all 200ms ease;
+transition: all 200ms ease;
+font-size: 15px;
+margin: var(--margin-10);
+}
+.primary {
+    background: var(--primary);
+    color: var(--primary-text);
+    }
+    .primary:hover {
+        background: var(--primary-dim);
+        }
+        .primary:active {
+            background: var(--primary-dim);
+            box-shadow: 0px 0px 0px 4px var(--primary-active);
+            }
+.secondary {
+    background: var(--secondary);
+    color: var(--secondary-text);
+    }
+    .secondary:hover {
+        background: var(--secondary-dim);
+        }
+        .secondary:active {
+            background: var(--secondary-dim);
+            box-shadow: 0px 0px 0px 4px var(--secondary-active);
+            }
+.error {
+    background: var(--error);
+    color: var(--error-text);
+    }
+    .error:hover {
+        background: var(--error-dim);
+        }
+        .error:active {
+            background: var(--error-dim);
+            box-shadow: 0px 0px 0px 4px var(--error-active);
+            }
+.warning {
+    background: var(--warning);
+    color: var(--warning-text);
+    }
+    .warning:hover {
+        background: var(--warning-dim);
+        }
+        .warning:active {
+            background: var(--warning-dim);
+            box-shadow: 0px 0px 0px 4px var(--warning-active);
+            }
+.success {
+    background: var(--success);
+    color: var(--success-text);
+    }
+    .success:hover {
+        background: var(--success-dim);
+        }
+        .success:active {
+            background: var(--success-dim);
+            box-shadow: 0px 0px 0px 4px var(--success-active);
+            }
 .alfrd-row {
     display: flex;
     justify-content: center;
@@ -94,95 +200,18 @@ body {
 .alfrd-5>* {
     width: 20%;
 }
-.alfrd-btn {
-    margin: var(--margin10);
-    padding: var(--padding10);
-    font-size: var(--btnfontsize);
-    border-radius: 50px;
-    -webkit-transition: all 400ms ease;
-    transition: all 400ms ease;
-    border: none;
+.alfrd-6>* {
+    width: 16.6%;
 }
-.btn-p {
-    color: var(--primarytext);
-    background: var(--primary);
+.alfrd-7>* {
+    width: 14.2857142857%;
 }
-.btn-p:hover {
-    color: var(--primarytext);
-    background: var(--dimprimary);
+.alfrd-8>* {
+    width: 12.5%;
 }
-.btn-p:active {
-    color: var(--primarytext);
-    background: var(--dimprimary);
-    box-shadow:  0px 0px 0px 4px var(--primaryboxshadow);
+.alfrd-9>* {
+    width: 11.1%;
 }
-
-.btn-s {
-    color: var(--secondarytext);
-    background: var(--secondary);
+.alfrd-10>* {
+    width: 10%;
 }
-.btn-s:hover {
-    color: var(--secondarytext);
-    background: var(--dimsecondary);
-}
-.btn-s:active {
-    color: var(--secondarytext);
-    background: var(--dimsecondary);
-    box-shadow:  0px 0px 0px 4px var(--secondaryboxshadow);
-}
-.btn-a {
-    color: var(--alttext);
-    background: var(--alt);
-}
-.btn-a:hover {
-    color: var(--alttext);
-    background: var(--dimalt);
-}
-.btn-a:active {
-    color: var(--alttext);
-    background: var(--dimalt);
-    box-shadow:  0px 0px 0px 4px var(--altboxshadow);
-}
-
-
-.btn-e {
-    color: var(--errortext);
-    background: var(--error);
-}
-.btn-e:hover {
-    color: var(--errortext);
-    background: var(--dimerror);
-}
-.btn-e:active {
-    color: var(--errortext);
-    background: var(--dimerror);
-    box-shadow:  0px 0px 0px 4px var(--errorboxshadow);
-}
-.btn-g {
-    color: var(--goodtext);
-    background: var(--good);
-}
-.btn-g:hover {
-    color: var(--goodtext);
-    background: var(--dimgood);
-}
-.btn-g:active {
-    color: var(--goodtext);
-    background: var(--dimgood);
-    box-shadow:  0px 0px 0px 4px var(--goodboxshadow);
-}
-.alfrd-nav-light {
-    width: 100%;
-    padding: var(--padding10);
-    border-radius: 0px;
-    background: var(--modulebglight);
-    box-shadow:  10px 10px 20px var(--bglightboxshadow),
-             -10px -10px 20px var(--bglightboxshadow2);
-}
-.fixed {
-    position: fixed;
-}
-.top {
-    top: 0px;
-}
-
