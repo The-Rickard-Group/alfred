@@ -1,64 +1,82 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 :root {
---border-radius: 1rem;
---border-radius-inner: 0.75rem;
+    --border-radius: 1rem;
+    --border-radius-inner: 0.75rem;
 
---shadow-main: 0 20px 27px 0 rgb(0 0 0 / 5%);
---shadow-main-inset: inset 0 20px 27px 0 rgb(0 0 0 / 5%);
+    --shadow-main: 0 20px 27px 0 rgb(0 0 0 / 5%);
+    --shadow-main-inset: inset 0 20px 27px 0 rgb(0 0 0 / 5%);
 
---padding-0: 0px;
---padding-5: 5px;
---padding-10: 10px;
---padding-15: 15px;
---padding-20: 20px;
---padding-40: 40px;
+    --padding-0: 0px;
+    --padding-5: 5px;
+    --padding-10: 10px;
+    --padding-15: 15px;
+    --padding-20: 20px;
+    --padding-40: 40px;
 
---margin-0: 0px;
---margin-5: 5px;
---margin-10: 10px;
---margin-15: 15px;
---margin-20: 20px;
---margin-40: 40px;
+    --margin-0: 0px;
+    --margin-5: 5px;
+    --margin-10: 10px;
+    --margin-15: 15px;
+    --margin-20: 20px;
+    --margin-40: 40px;
 
---primary: #2776f5;
---primary-dim: #478af5;
---primary-active: #2776f580;
---primary-text: #ffffff;
+    --std-transition: all 200ms ease;
 
---secondary: #767e8c;
---secondary-dim: #868f9e;
---secondary-active: #767e8c80;
---secondary-text: #ffffff;
+    --primary: #2776f5;
+    --primary-dim: #478af5;
+    --primary-active: #2776f580;
 
---error: #ff243d;
---error-dim: #ff3d54;
---error-active: #ff243d80;
---error-text: #ffffff;
+    --primary-text: #ffffff;
+    --secondary: #767e8c;
+    --secondary-dim: #868f9e;
+    --secondary-active: #767e8c80;
+    --secondary-text: #ffffff;
 
---warning: #ffd117;
---warning-dim: #ffd942;
---warning-active: #ffd11780;
---warning-text: #ffffff;
+    --error: #ff243d;
+    --error-dim: #ff3d54;
+    --error-active: #ff243d80;
+    --error-text: #ffffff;
 
---success: #51f03c;
---success-dim: #6ee65e;
---success-active: #51f03c80;
---success-text: #ffffff;
+    --warning: #ffbe17;
+    --warning-dim: #ffd058;
+    --warning-active: #ffbe1780;
+    --warning-text: #ffffff;
 
---page-bg-light: #f8f9fa;
---page-text-light: #262626;
---page-bg-dark: #262626;
---page-text-dark: #f2f2f2;
+    --success: #36c922;
+    --success-dim: #6acf5c;
+    --success-active: #36c92280;
+    --success-text: #ffffff;
 
---module-alt-bg: linear-gradient(310deg,#141727,#3a416f);
---module-alt-text: #fff;
+    --page-bg-light: #f8f9fa;
+    --page-text-light: #262626;
+    --page-bg-dark: #262626;
+    --page-text-dark: #f2f2f2;
 
---module-light-bg: #ffffff;
---module-light-border: #f1f1f1;
---module-light-text: #262626;
---module-dark-bg: #3d3d3d;
---module-dark-border: #2b2b2b;
---module-dark-text: #f2f2f2;
+    --module-alt-bg: linear-gradient(310deg,#141727,#3a416f);
+    --module-alt-text: #fff;
+
+    --module-light-bg: #ffffff;
+    --module-light-border: #f1f1f1;
+    --module-light-text: #262626;
+
+    --module-dark-bg: #3d3d3d;
+    --module-dark-border: #2b2b2b;
+    --module-dark-text: #f2f2f2;
+}
+.alfrd-link:hover {
+color: var(--primary-dim);
+}
+.alfrd-link:active {
+    color: var(--primary-active);
+    }
+a:link {
+  color: var(--primary);
+  -webkit-transition: var(--std-transition);
+  transition: var(--std-transition);
+  text-decoration: none;
+}
+a:visited {
+  color: var(--primary);
 }
 body {
     margin: 0px;
@@ -103,13 +121,16 @@ margin-top: 0px !important;
 .alfrd-mb0 {
 margin-bottom: 0px !important;
 }
+.alfrd-m0 {
+margin: 0px !important;
+}
 .alfrd-input {
 border: 1px solid transparent;
 padding: var(--padding-10);
 margin: var(--margin-10);
 border-radius: var(--border-radius);
--webkit-transition: all 200ms ease;
-transition: all 200ms ease;
+-webkit-transition: var(--std-transition);
+transition: var(--std-transition);
 box-shadow: var(--shadow-main-inset);
 }
 .alfrd-textarea {
@@ -117,8 +138,8 @@ border: 1px solid transparent;
 padding: var(--padding-10);
 margin: var(--margin-10);
 border-radius: var(--border-radius);
--webkit-transition: all 200ms ease;
-transition: all 200ms ease;
+-webkit-transition: var(--std-transition);
+transition: var(--std-transition);
 box-shadow: var(--shadow-main-inset);
 }
 .input-light {
@@ -174,8 +195,8 @@ color: var(--module-dark-text)
 border: none;
 border-radius: var(--border-radius);
 padding: var(--padding-10);
--webkit-transition: all 200ms ease;
-transition: all 200ms ease;
+-webkit-transition: var(--std-transition);
+transition: var(--std-transition);
 font-size: 15px;
 margin: var(--margin-10);
 }
