@@ -1,6 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 :root {
 --border-radius: 1rem;
+--border-radius-inner: 0.75rem;
 
 --shadow-main: 0 20px 27px 0 rgb(0 0 0 / 5%);
 --shadow-main-inset: inset 0 20px 27px 0 rgb(0 0 0 / 5%);
@@ -48,6 +49,9 @@
 --page-text-light: #262626;
 --page-bg-dark: #262626;
 --page-text-dark: #f2f2f2;
+
+--module-alt-bg: linear-gradient(310deg,#141727,#3a416f);
+--module-alt-text: #fff;
 
 --module-light-bg: #ffffff;
 --module-light-border: #f1f1f1;
@@ -149,10 +153,17 @@ padding: var(--padding-20);
 margin: var(--margin-10);
 box-shadow: var(--shadow-main);
 }
+.alfrd-module > .alfrd-module {
+    border-radius: var(--border-radius-inner);
+}
 .module-light {
 background: var(--module-light-bg);
 border: 1px solid var(--module-light-border);
 color: var(--module-light-text)
+}
+.module-alt {
+background: var(--module-alt-bg);
+color: var(--module-alt-text)
 }
 .module-dark {
 background: var(--module-dark-bg);
